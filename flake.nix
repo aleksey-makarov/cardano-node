@@ -1,6 +1,10 @@
 {
   description = "Cardano Node";
 
+  nixConfig.bash-prompt = "cardano-node";
+  nixConfig.bash-prompt-prefix = "[\\033[1;33m";
+  nixConfig.bash-prompt-suffix = "\\033[0m \\w]$ ";
+
   nixConfig = {
     extra-substituters = [ "https://cache.iog.io" ];
     extra-trusted-public-keys = [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];

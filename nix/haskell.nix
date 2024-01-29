@@ -161,7 +161,7 @@ let
               BASH_COMPLETIONS=$out/share/bash-completion/completions
               ZSH_COMPLETIONS=$out/share/zsh/site-functions
               mkdir -p $BASH_COMPLETIONS $ZSH_COMPLETIONS
-              $out/bin/${exeName} --bash-completion-script ${exeName} > $BASH_COMPLETIONS/${exeName}
+              # $out/bin/${exeName} --bash-completion-script ${exeName} > $BASH_COMPLETIONS/${exeName}
               $out/bin/${exeName} --zsh-completion-script ${exeName} > $ZSH_COMPLETIONS/_${exeName}
             '';
           in lib.mkIf (!pkgs.stdenv.hostPlatform.isWindows)
